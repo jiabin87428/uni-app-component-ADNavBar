@@ -56,11 +56,11 @@
 
 <style>
 	.middleItem {
+		min-width: calc(100vw / 5);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		
 		font-size: 22upx;
 	}
 	.buttonView {
