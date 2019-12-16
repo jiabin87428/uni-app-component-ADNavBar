@@ -1,7 +1,7 @@
 <template>
 	<view class="navBase" :style="[{height:customBarHeight + 'px'}]">
 		<view class="navBar" :style="style" :class="[bgImage!=''?'none-bg bg-white bg-img':'',bgColor]">
-			<view class="leftView" :style="{height: customBarHeight - statusBarHeight + 'px', color: backColor}" @tap="backClick">
+			<view class="leftView" :style="{height: customBarHeight - statusBarHeight + 'px', color: backColor, paddingRight: !isRoot ? '30upx' : '0upx'}" @tap="backClick">
 				<view class="adIcon back" :style="{color: backColor}" v-if="!isRoot"></view>{{!isRoot ? backText : ''}}
 				<slot name="left" v-if="!isRoot"></slot>
 			</view>
@@ -145,7 +145,7 @@
 		justify-content: center;
 		
 		padding-left: 30upx;
-		padding-right: 30upx;
+		/* padding-right: 30upx; */
 	}
 	.titleView {
 		position: absolute;
@@ -181,7 +181,7 @@
 		align-items: center;
 		justify-content: flex-end;
 		
-		padding-right: 16upx;
+		padding-right: 30upx;
 	}
 	
 	.rightView  view {
