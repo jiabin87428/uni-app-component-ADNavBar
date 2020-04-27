@@ -1,9 +1,9 @@
 <template>
 	<view class="baseView" id="baseView">
-		<page1 v-if="curPage=='page1'"></page1>
-		<page2 v-if="curPage=='page2'"></page2>
-		<page3 v-if="curPage=='page3'"></page3>
-		<page4 v-if="curPage=='page4'"></page4>
+		<page1 :style="{'display':curPage == 'page1' ?'block':'none'}"></page1>
+		<page2 :style="{'display':curPage == 'page2' ?'block':'none'}"></page2>
+		<page3 :style="{'display':curPage == 'page3' ?'block':'none'}"></page3>
+		<page4 :style="{'display':curPage == 'page4' ?'block':'none'}"></page4>
 		<adTabbar :tabHeight='tabHeight'>
 			<adTabbarItem text="首页" dataCur="page1" class="maxWidth" @click="navClick" :textColor="curPage=='page1'? '#DF421D':'#9B9B9B'" :icon="'../../static/andy-ADTabbar/home' + [curPage=='page1'?'-hover':''] + '.png'"></adTabbarItem>
 			<adTabbarItem text="订单" dataCur="page2" class="maxWidth" @click="navClick" :textColor="curPage=='page2'? '#DF421D':'#9B9B9B'" :icon="'../../static/andy-ADTabbar/order' + [curPage=='page2'?'-hover':''] + '.png'"></adTabbarItem>
